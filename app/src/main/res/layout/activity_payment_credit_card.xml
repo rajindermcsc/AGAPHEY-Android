@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient"
+    tools:context=".views.main.PaymentPlans">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+
+        <LinearLayout
+            android:id="@+id/llt_login_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:text="Payment Plan"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center_vertical"
+                android:text="Please enter your card details to continue."
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+
+
+            <com.obs.CustomTextView
+                android:id="@+id/rv_payment_plans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Card Number"
+                android:textColor="@color/white">
+
+            </com.obs.CustomTextView>
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="16"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:hint="Enter Card Number"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp">
+
+            </com.obs.CustomEditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:orientation="vertical">
+
+                    <com.obs.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expiry Date"
+                        android:textColor="@color/white">
+
+                    </com.obs.CustomTextView>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/edt_expiry"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:maxLength="5"
+                        android:inputType="number"
+                        android:hint="08/23"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp">
+
+                    </com.obs.CustomEditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:orientation="vertical">
+
+                    <com.obs.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CVV"
+                        android:textColor="@color/white">
+
+                    </com.obs.CustomTextView>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/edt_cvv"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:maxLength="3"
+                        android:hint="123"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:inputType="number"
+                        android:textSize="14sp">
+
+                    </com.obs.CustomEditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:orientation="vertical">
+
+                    <com.obs.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="@color/white">
+
+                    </com.obs.CustomTextView>
+
+                    <com.obs.CustomEditText
+                        android:id="@+id/edt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:maxLength="3"
+                        android:hint="Name on card"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:inputType="number"
+                        android:textSize="14sp">
+
+                    </com.obs.CustomEditText>
+
+            </LinearLayout>
+
+
+            <com.obs.CustomTextView
+                android:id="@+id/tv_continue"
+                style="@style/proximanova_regular"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/oval_btn_gray_border"
+                android:gravity="center"
+                android:layout_gravity="end"
+                android:padding="15dp"
+                android:drawableRight="@drawable/arrownextright"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

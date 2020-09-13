@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+
+
+    <com.obs.CustomTextView
+        android:visibility="gone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/text_active"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textSize="18dp"
+        android:textColor="@color/white">
+
+    </com.obs.CustomTextView>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            android:background="@color/white"
+            app:tabIndicatorColor="#e30b5d"
+            app:tabSelectedTextColor="#e30b5d"
+            app:tabTextColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </com.google.android.material.tabs.TabLayout>
+
+        <com.websoftquality.agaphey.utils.NonSwipeableViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager">
+
+    </com.websoftquality.agaphey.utils.NonSwipeableViewPager>
+
+
+</LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_main_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_back">
+
+        <include layout="@layout/list_card_layout" />
+
+        <com.websoftquality.agaphey.views.customize.RippleBackground
+            android:id="@+id/rb_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="90dp"
+            app:rb_color="@color/orange"
+            app:rb_duration="4000"
+            android:visibility="gone"
+            app:rb_radius="32dp"
+            app:rb_rippleAmount="4"
+            app:rb_scale="6">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo_background"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
+                app:fabSize="auto" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/tv_match"
+                style="@style/proximanova_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/civ_profile_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:maxLines="1"
+                android:text="@string/find_people"
+                android:textColor="@color/text_semi_dark"
+                android:textSize="17sp" />
+
+        </com.websoftquality.agaphey.views.customize.RippleBackground>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/llt_igniter_action"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rlt_unlike_lay"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="0dp"
+                android:layout_toLeftOf="@+id/rlt_superlike_lay"
+                android:layout_toStartOf="@+id/rlt_superlike_lay"
+                android:background="@drawable/circle">
+
+                <ImageView
+                    android:id="@+id/iv_unlike"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleX=".35"
+                    android:scaleY=".35"
+                    android:src="@drawable/ic_drawer_unlike" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:visibility="visible"
+                android:id="@+id/rlt_like_lay"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="0dp"
+                android:layout_toEndOf="@+id/rlt_unlike_lay"
+                android:layout_toRightOf="@+id/rlt_unlike_lay"
+                android:background="@drawable/circle">
+
+                <ImageView
+                    android:id="@+id/iv_like"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleX=".42"
+                    android:scaleY=".42"
+                    android:src="@drawable/ic_drawer_likes" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:orientation="vertical"-->
+<!--    android:background="@drawable/background_gradient">-->
+
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/tabLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:minHeight="?attr/actionBarSize"-->
+<!--        app:tabTextColor="@color/black"-->
+<!--        app:tabSelectedTextColor="@color/color_accent"-->
+<!--        app:tabIndicator="@color/color_accent"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+<!--    </com.google.android.material.tabs.TabLayout>-->
+
+<!--    <androidx.viewpager.widget.ViewPager-->
+<!--        android:id="@+id/pager"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--    </androidx.viewpager.widget.ViewPager>-->
+
+<!--</LinearLayout>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MessageFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        android:padding="5dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/background_image">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <com.obs.CustomTextView
+                android:id="@+id/name"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:text="Shubham Garg"
+                android:layout_toRightOf="@+id/image"
+                android:layout_width="wrap_content"
+                android:textColor="@color/color_accent"
+                android:layout_height="wrap_content">
+
+            </com.obs.CustomTextView>
+
+            <com.obs.CustomTextView
+                android:id="@+id/message"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"
+                android:text="Hi, how are you"
+                android:layout_toRightOf="@+id/image"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content">
+
+            </com.obs.CustomTextView>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+<!--   <androidx.recyclerview.widget.RecyclerView-->
+<!--       android:id="@+id/rv_single_chat"-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="match_parent">-->
+<!--       -->
+<!--   </androidx.recyclerview.widget.RecyclerView>-->
+</FrameLayout>

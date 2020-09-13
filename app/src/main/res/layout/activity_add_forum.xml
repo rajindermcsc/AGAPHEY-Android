@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginTop="20dp"
+    android:padding="5dp"
+    tools:context=".views.main.AddForumActivity">
+
+    <com.obs.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/color_gradient_first"
+        android:text="Enter Topic">
+
+    </com.obs.CustomTextView>
+
+    <com.obs.CustomEditText
+        android:id="@+id/edt_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:hint="Topic"
+        android:textColorHint="@color/quantum_black_hint_text"
+        android:textSize="15sp">
+
+    </com.obs.CustomEditText>
+
+
+    <com.obs.CustomTextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/color_gradient_first"
+        android:text="Enter Description">
+
+    </com.obs.CustomTextView>
+
+    <com.obs.CustomEditText
+        android:id="@+id/edt_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:hint="Description"
+        android:textColorHint="@color/quantum_black_hint_text"
+        android:textSize="15sp">
+
+    </com.obs.CustomEditText>
+
+    <com.obs.CustomTextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/color_gradient_first"
+        android:text="Image">
+
+    </com.obs.CustomTextView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_forum"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_person"
+        android:textSize="15sp">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <com.obs.CustomTextView
+        android:id="@+id/tv_submit"
+        style="@style/proximanova_regular"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/oval_btn_gray_border"
+        android:gravity="center"
+        android:layout_gravity="end"
+        android:padding="15dp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -1,0 +1,651 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:background="@drawable/background_gradient">
+
+    <include layout="@layout/header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <com.websoftquality.agaphey.views.customize.CustomRecyclerView
+                android:id="@+id/rv_edit_profile_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <include
+                        android:id="@+id/rlt_profile_image_one"
+                        layout="@layout/edit_profile_image_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="2" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <include
+                            android:id="@+id/rlt_profile_image_two"
+                            layout="@layout/edit_profile_image_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1" />
+
+                        <include
+                            android:id="@+id/rlt_profile_image_three"
+                            layout="@layout/edit_profile_image_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <include
+                        android:id="@+id/rlt_profile_image_six"
+                        layout="@layout/edit_profile_image_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1" />
+
+                    <include
+                        android:id="@+id/rlt_profile_image_five"
+                        layout="@layout/edit_profile_image_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1" />
+
+                    <include
+                        android:id="@+id/rlt_profile_image_four"
+                        layout="@layout/edit_profile_image_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="15dp"
+                android:visibility="gone">
+
+                <com.obs.CustomTextView
+                    style="@style/proximanova_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/smart_photos"
+                    android:textColor="@color/igniter_red"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_smart_photos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:checked="true" />
+
+                <com.obs.CustomTextView
+                    style="@style/proximanova_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/switch_smart_photos"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/smart_photos_description"
+                    android:textColor="@color/text_light_gray"
+                    android:textSize="12.5sp" />
+            </RelativeLayout>
+
+            <com.obs.CustomTextView
+                android:id="@+id/tv_dob"
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="DOB"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/edt_dob"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Enter DOB(DD/MM/YYYY)"
+                android:ems="10"
+                android:inputType="date"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                android:id="@+id/tv_about_username"
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="@string/about"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <com.obs.CustomEditText
+                    android:id="@+id/edt_about"
+                    style="@style/proximanova_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@null"
+                    android:hint="@string/hint_about"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxLength="500"
+                    android:textColor="@color/text_light_gray"
+                    android:textCursorDrawable="@drawable/cursorcolor"
+                    android:textSize="16sp" />
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tv_about_count"
+                    style="@style/proximanova_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="20dp"
+                    android:text="500"
+                    android:textColor="@color/light_gray"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="How would you Describe your relationship with Jesus?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_relation"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Describe your relationship"
+                android:inputType="textCapSentences"
+                android:maxLength="100"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="How do you display the revivalist lifestyle in your daily life?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_lifestyle"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Describe your revivalist lifestyle"
+                android:inputType="textCapSentences"
+                android:maxLength="100"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="What are the characteristics that you are looking for in a partner?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_characteristics"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Describe the characteristics you are looking for"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="What are your non-negotiables and deal breakers?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_deal"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Describe your non-negotiables and deal breakers"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="What is your main vision/dream/mission that you are called to?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_vision"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Describe your vision/dream/mission"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="What is something about you that sounds made up but is 100% true?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_sound"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Describe something about you"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="Do you drink or smoke? If so, please explain."
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_smoke"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Yes or no(optional)"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="Do you want children and if so, how many?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_child"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Yes or no(optional)"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="Would you be willing to relocate for love?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_relocate"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Yes or no(optional)"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="What makes you come ALIVE?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_alive"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Optional"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="What do you love to do for fun? What is your favourite hobby?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_fun"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Optional"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="What is the Lord speaking to you about right now?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_lord"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Optional"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="What made you decide to join this app and what are you hoping to get out of it?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_join"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Optional"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="What can the people who see your profile pray for you for? "
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_pray"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Optional"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+            <com.obs.CustomTextView
+                style="@style/proximanova_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="15dp"
+                android:text="Is there anything else you would like to add?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.obs.CustomEditText
+                android:id="@+id/edt_additional"
+                style="@style/proximanova_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:hint="Optional"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/text_light_gray"
+                android:textCursorDrawable="@drawable/cursorcolor"
+                android:textSize="16sp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/edit_profile_bg" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

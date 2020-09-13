@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient"
+    tools:context=".views.main.PaymentPlans">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+
+    <LinearLayout
+        android:id="@+id/llt_login_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.obs.CustomTextView
+            style="@style/proximanova_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:text="Payment Plan"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <com.obs.CustomTextView
+            style="@style/proximanova_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center_vertical"
+            android:text="Please Select a payment plan to continue."
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+
+        <com.obs.CustomTextView
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Enjoy your 7 day free trial. After the 7 days you will be charged based upon the plan you choose below"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_payment_plans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <com.obs.CustomTextView
+            android:id="@+id/tv_continue"
+            style="@style/proximanova_regular"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/oval_btn_gray_border"
+            android:gravity="center"
+            android:layout_gravity="end"
+            android:padding="15dp"
+            android:drawableRight="@drawable/arrownextright"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

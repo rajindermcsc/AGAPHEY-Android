@@ -1,0 +1,166 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/background_gradient">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/logo"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center">
+
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <com.obs.CustomTextView
+                    style="@style/proximanova_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Sign Up"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+                <com.obs.CustomTextView
+                    style="@style/proximanova_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:gravity="center_vertical"
+                    android:text="Sign up for your account."
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+
+                <com.obs.CustomEditText
+                    android:id="@+id/edt_full_name"
+                    style="@style/proximanova_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full name"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:paddingBottom="18dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@drawable/cursorcolor"
+                    android:textSize="15sp"
+                    android:theme="@style/EditTextTheme"
+                    android:windowSoftInputMode="stateVisible" />
+
+                <com.obs.CustomEditText
+                    android:id="@+id/edt_user_name"
+                    style="@style/proximanova_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:paddingBottom="18dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@drawable/cursorcolor"
+                    android:textSize="15sp"
+                    android:theme="@style/EditTextTheme"
+                    android:windowSoftInputMode="stateVisible" />
+
+                <com.obs.CustomEditText
+                    android:id="@+id/edt_email"
+                    style="@style/proximanova_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingBottom="18dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@drawable/cursorcolor"
+                    android:textSize="15sp"
+                    android:theme="@style/EditTextTheme"
+                    android:windowSoftInputMode="stateVisible" />
+
+
+                <com.obs.CustomEditText
+                    android:id="@+id/edt_password"
+                    style="@style/proximanova_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingBottom="18dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textCursorDrawable="@drawable/cursorcolor"
+                    android:textSize="15sp"
+                    android:theme="@style/EditTextTheme"
+                    android:windowSoftInputMode="stateVisible" />
+
+
+
+                <com.obs.CustomTextView
+                    android:id="@+id/tv_login_phone"
+                    style="@style/proximanova_regular"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/oval_btn_gray_border"
+                    android:gravity="center"
+                    android:layout_gravity="end"
+                    android:padding="15dp"
+                    android:drawableRight="@drawable/arrownextright"
+                    android:text="Continue"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
